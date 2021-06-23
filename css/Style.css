@@ -1,0 +1,59 @@
+img {
+    position: relative;
+    width: 20%;
+}
+
+a img {
+    border: 0;
+    width: 88px;
+    height: 31px
+}
+
+body{
+    padding: 8px;
+    background-color: darkslategrey;
+    font-family: 'fantasy', monospace;
+}
+
+.description {
+    display: flex;
+    padding-left: 40px;
+    display: grid;
+    align-items: center;
+}
+
+h1, h2, h3, a {
+    color: darkgoldenrod;
+}
+
+li > a {
+    outline: none;
+    text-decoration: none;
+    color: #2C7EEA;
+}
+
+a:hover {
+    border-bottom: 1px solid;
+}
+
+.validator{
+    border:0;
+    width:88px;
+    height:31px;
+}
+
+
+span {
+    color: darksalmon;
+    font-weight: bold;
+}
+
+p, li, caption {
+    color: white;
+}
+
+p::first-letter {
+
+    font-size: xx-large;
+    font-weight: bold;
+}
