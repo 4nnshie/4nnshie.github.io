@@ -35,6 +35,7 @@ blockquote{
     background-color: #FFFFA8;
 }
 .footer-div{
+    text-align: right;
     font-family: monospace;
 }
 
@@ -47,6 +48,8 @@ blockquote{
     text-align: center;
     size: 22pt;
     font-weight: bold;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 .validator{
