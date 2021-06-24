@@ -1,0 +1,45 @@
+/*Float Boxes*/
+#outer {
+    border: 2px dashed black;
+    padding: 10px;
+    column-count: 3;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    margin-bottom: 10px;
+    column-gap: 2px;
+    clear: left;
+}
+/*Menu*/
+li {
+    background-color: white;
+    display: inline;
+    border: 1px solid black;
+    padding: 10px;
+}
+ul {
+    text-align: center;
+    background-color: red;
+    padding: 20px;
+}
+#box {
+    background-color: lightgray;
+    overflow: hidden;
+    padding: 10px;
+    width: 500px;
+    column-count: 3;
+}
+#colum {
+    background-color: lightblue;
+    float: right;
+    margin-left: 10px;
+    width: 100px;
+}
+h1 {
+    background-color: yellow;
+}
+
+
+
