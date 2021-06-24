@@ -3,15 +3,16 @@
     border: 2px dashed black;
     padding: 10px;
     columns: 3;
-
+    column-gap: 2em;
 }
 .box {
     width: 100px;
     height: 100px;
     background-color: black;
     margin-bottom: 10px;
-    column-gap: 2px;
+
 }
+
 /*Menu*/
 li {
     background-color: white;
