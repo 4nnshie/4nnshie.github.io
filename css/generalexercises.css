@@ -2,7 +2,8 @@
 #outer {
     border: 2px dashed black;
     padding: 10px;
-    column-count: 3;
+    columns: 3;
+
 }
 .box {
     width: 100px;
@@ -10,7 +11,7 @@
     background-color: black;
     margin-bottom: 10px;
     column-gap: 2px;
-    clear: left;
+    float: left;
 }
 /*Menu*/
 li {
