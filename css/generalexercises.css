@@ -22,24 +22,65 @@ li {
 ul {
     text-align: center;
     background-color: red;
-    padding: 20px;
+    padding: 22px;
+}
+
+/*Layout2*/
+#box-header {
+    background-color: yellow;
 }
 #box {
     background-color: lightgray;
+    padding: 9px;
+    width: 497px;
     overflow: hidden;
-    padding: 10px;
-    width: 500px;
-    column-count: 3;
 }
-#colum {
+.column {
     background-color: lightblue;
     float: right;
     margin-left: 10px;
+    width: 110px;
+}
+/*More Floats*/
+.a, .b , #a1, #a2, #a3, #b1, #b2, #b3{
     width: 100px;
+    height: 100px;
+    font: 30pt bold Helvetica, Arial, sans-serif;
+    line-height: 100px;
+    text-align: center;
 }
-h1 {
-    background-color: yellow;
+.a, #a1, #a2, #a3 { background-color: lightblue; }
+.b, #b1, #b2, #b3 { background-color: pink; }
+.c, #c1, #c2, #c3 { background-color: lightgray; }
+
+#a1 {
+    float: left;
 }
+#b1 {
+    float: right;
+}
+
+#a2 {
+    float: left;
+}
+#b2 {
+    clear: left;
+    float: right;
+}
+
+#a3 {
+    float: left;
+}
+#b3 {
+    clear: left;
+    float: right;
+}
+#c3 {
+    clear: left;
+    text-align: right;
+}
+
+
 
 
 
