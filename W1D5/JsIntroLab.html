@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- saved from url=(0152)https://sakai.cs.miu.edu/access/content/attachment/937378a9-0b22-45f6-8986-20afa94b2d3a/Assignments/becb19f0-b490-4679-a09f-79d93e408018/JsIntroLab.html -->
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>JsIntroLab</title>
+    <script>
+
+        /* runs test to see if expected argument is === to value returned by function2test argument */
+        function myFunctionTest(expected, found) {
+            if (expected === found || JSON.stringify(expected) === JSON.stringify(found)) {
+                return "TEST SUCCEEDED";
+            } else {
+                return "TEST FAILED.  Expected " + expected + " found " + found;
+            }
+        }
+
+        /* max returns the maximum of 2 arguments */
+        function max(x, y) {
+            if (x > y) {
+                return x;
+            } else {
+                return y;
+            };
+        }
+
+        console.log("Expected output of max(20,10) is 20  " + myFunctionTest(20, max(20, 10)));
+
+        /* max3 takes 3 numbers as arguments and returns the largest */
+        function maxOfThree(a, b, c) {
+            return max(max(a, b), c);
+        }
+
+        console.log("Expected output of maxOfThree(5,4,44) is 44  " + myFunctionTest(44, maxOfThree(5, 4, 44)));
+        console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(55, maxOfThree(55, 4, 44)));
+
+        console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(4, maxOfThree(55, 4, 44)));
+
+        function isVowel(char) {
+            return char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u';
+        }
+
+        console.log("Expected output of isVowel('a') is true  " + myFunctionTest(true, isVowel('a')));
+        console.log("Expected output of isVowel('r') is false  " + myFunctionTest(false, isVowel('r')));
+
+        function sum(array) {
+            let sum = 0;
+            for (let i = 0; i < array.length; i++) {
+                sum += array[i];
+            };
+            return sum;
+        }
+
+        console.log("Expected output of sum([1,1,3,3]) is 8 " + myFunctionTest(8, sum([1,1,3,3])));
+        console.log("Expected output of sum([1,1,3,3]) is 9 " + myFunctionTest(9, sum([1,1,3,3])));
+
+        function multiply(array) {
+            let mult = 1;
+            for (let i = 0; i < array.length; i++) {
+                mult *= array[i];
+            };
+            return mult;
+        }
+
+        console.log("Expected output of multiply([1,1,3,3]) is 9 " + myFunctionTest(9, multiply([1,1,3,3])));
+        console.log("Expected output of multiply([1,1,3,3]) is 8 " + myFunctionTest(8, multiply([1,1,3,3])));
+
+        function reverse(str) {
+            let reverseStr = "";
+            for (let i = str.length - 1; i >= 0; i--) {
+                reverseStr += str[i];
+            };
+            return reverseStr;
+        }
+
+        console.log("Expected output of reverse('hello') is olleh " + myFunctionTest('olleh', reverse('hello')));
+        console.log("Expected output of reverse('hello') is oleh " + myFunctionTest('oleh', reverse('hello')));
+
+        function findLongestWord(wordsArray) {
+            let longestWord = 0;
+            for (let i = 0; i < wordsArray.length; i++) {
+                if (wordsArray[i].length > longestWord) {
+                    longestWord = wordsArray[i].length;
+                }
+            }
+            return longestWord;
+        }
+
+        console.log("Expected output of findLongestWord(['hi','lovely','peps']) is 6 " + myFunctionTest(6, findLongestWord(['hi','lovely','peps'])));
+        console.log("Expected output of findLongestWord(['hi','lovely','peps']) is 4 " + myFunctionTest(4, findLongestWord(['hi','lovely','peps'])));
+
+        function filterLongWords(wordsArray, n) {
+            let longWordsArray = [];
+            for (let i = 0; i < wordsArray.length; i++) {
+                if (wordsArray[i].length > n) {
+                    longWordsArray.push(wordsArray[i]);
+                }
+            }
+            return longWordsArray;
+        }
+
+        console.log("Expected output of filterLongWords(['hi','lovely','peps'], 2) is ['lovely','peps'] " + myFunctionTest(['lovely','peps'], filterLongWords(['hi','lovely','peps'],2)));
+        console.log("Expected output of filterLongWords(['hi','lovely','peps'], 6) is ['lovely'] " + myFunctionTest(['lovely'], filterLongWords(['hi','lovely','peps'],6)));
+
+
+        const a = [1, 1, 3, 3];
+
+        //multiply each element by 10
+        let multby10 = a.map(function (elem, i, array) {
+            return elem * 10;
+        });
+
+        console.log("Expected output of multby10 with a = [1, 1, 3, 3] is [10, 10, 30, 30] " + myFunctionTest([10, 10, 30, 30], multby10));
+
+        // return array with all elements equal to 3
+        const justNumThree = a.filter(function (elem, i, array) {
+            return elem === 3;
+        });
+
+        console.log("Expected output of justNumThree with a = [1, 1, 3, 3] is [3, 3] " + myFunctionTest([3, 3], justNumThree));
+
+        // return the product of all elements;
+        const multAll = a.reduce(function (accumulator, elem) {
+            return accumulator * elem;
+        }, 1);
+
+        console.log("Expected output of multAll with a = [1, 1, 3, 3] is 9 " + myFunctionTest(9, multAll));
+
+    </script>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1018.0" data-gr-ext-installed="">
+
+Look in the Chrome developer console to see the output. CTRL_SHIFT_J <br>
+Or on Firefox with CTRL_SHIFT_K
+
+
+</body>
+<div id="vimeo-record-extension"></div>
+</html>
