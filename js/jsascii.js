@@ -85,7 +85,7 @@ window.onload = function () {
 
     function changeFontSize() {
         txtShowAnimation.style.fontSize = FONTSIZES[selectFont.value] + 'pt';
-        alert(selectFont.value + 'pt');
+        //alert(selectFont.value + 'pt');
     }
 
     var FONTSIZES = [];
