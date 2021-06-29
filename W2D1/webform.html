@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Form</title>
+    <link rel="stylesheet" href="../css/webform.css">
+    <form>
+        <div class="container">
+            <div>
+                <input id="url" type="url" placeholder="URL" name="url"
+                       pattern="https?://.+">
+            </div>
+            <div>
+                <label for="email">Email address </label>
+                <input id="email" type="text" placeholder="Enter email" name="email" required
+                       pattern="[a-z0-9._+\-]+@[a-z0-9.\-]+\.[a-z]{2,3}">
+                <span>We'll never share your email with anyone else.</span>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Password" name="password"
+                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" required>
+            </div>
+            <div>
+                <input id="checkout" type="checkbox" name="checkout"> Check me out
+            </div>
+            <div>
+                <button id="submitbtn" type="submit" class="submitbtn"> Submit</button>
+            </div>
+            <div id="validate">
+                <a href="http://validator.w3.org/check/referer">
+                    <img src="../images/w3c-html.png" alt="Valid HTML5"/>
+                </a> <br/>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                    <img src="../images/w3c-css.png" alt="Valid CSS"/>
+                </a> <br/>
+                <a href="http://mumstudents.org/jscheck/referer.php"><img
+                        src="http://mumstudents.org/jscheck/jscheck-small.png"
+                        alt="mumstudents JS check"/></a>
+            </div>
+        </div>
+    </form>
+</head>
+<body>
+
+</body>
+</html>
