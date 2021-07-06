@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<html><head>
+  <title>Bank Accounts</title>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+  <script>
+    // initialize mocha
+    mocha.setup('bdd');
+    // chai has a lot of stuff, let's make assert global
+    let assert = chai.assert;
+  </script>
+
+  <script src="account.js"></script>
+  <script src="savingsaccount.js"></script>
+  <script src="checkingaccount.js"></script>
+  <script src="bank.js"></script>
+  <script src="testbankaccounts.js"></script>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1020.0" data-gr-ext-installed="">
+<div id="mocha"><ul id="mocha-stats"><li class="progress"><canvas width="40" height="40"></canvas></li><li class="passes"><a href="javascript:void(0);">passes:</a> <em>0</em></li><li class="failures"><a href="javascript:void(0);">failures:</a> <em>0</em></li><li class="duration">duration: <em>0</em>s</li></ul><ul id="mocha-report"></ul></div>
+<script>
+  mocha.run();
+</script>
+
+<div id="validate">
+  <a href="http://validator.w3.org/check/referer">
+    <img src="../images/w3c-html.png" alt="Valid HTML5"/>
+  </a> <br/>
+  <a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img src="../images/w3c-css.png" alt="Valid CSS"/>
+  </a> <br/>
+  <a href="http://mumstudents.org/jscheck/referer.php"><img src="../images/jscheck-small.png" alt="mumstudents JS check"/></a>
+</div>
+
+</body><div id="vimeo-record-extension"></div></html>
