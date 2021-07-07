@@ -12,7 +12,8 @@ $(document).ready(function () {
         for (let i = 1; i < inputamount; i++) {
             createCircle(i, inputwidth);
         }
-        setInterval(grow, inputinterval);
+
+       setInterval(grow, inputinterval);
         $("div .c").click(function (e) {
             $(e.target).remove();
         });
@@ -40,8 +41,8 @@ $(document).ready(function () {
                 "width": width + "px",
                 "height": width + "px",
                 "z-index": "-" + i,
-                "margin-left": Math.random() * window.outerWidth,
-                "margin-top": Math.random() * window.outerHeight
+                "left": (Math.random() * ($(document).width() - width)),
+                "top": (Math.random() * ($(document).height() - width))
             },
         }));
     };
