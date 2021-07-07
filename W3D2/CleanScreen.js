@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+    "use strict"
+
     let inputwidth = null;
     let inputgrowth = null;
     let inputamount = null;
