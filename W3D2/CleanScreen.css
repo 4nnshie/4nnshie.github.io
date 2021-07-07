@@ -1,0 +1,45 @@
+ html, body{
+     overflow: hidden;
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+#playground{
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.control{
+    margin-bottom: 3px;
+    display: block;
+    float: right;
+}
+
+.controls-container{
+    width: 240px;
+    height: 150px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 60px;
+    margin-left: 100px ;
+    z-index: 2;
+}
+
+.c{
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+}
+ #c0{
+    background-color: red;
+    width: 50px;
+    height: 50px;
+     z-index: 1;
+     text-align: center;
+     border-radius: 50%;
+     position: absolute;
+}
