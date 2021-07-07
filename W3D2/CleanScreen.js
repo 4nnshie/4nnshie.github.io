@@ -17,6 +17,7 @@ $(document).ready(function () {
         }
 
        setInterval(grow, inputinterval);
+
         $("div .c").click(function (e) {
             $(e.target).remove();
         });
