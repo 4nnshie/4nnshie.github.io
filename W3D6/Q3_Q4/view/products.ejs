@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Products</title>
+</head>
+<body>
+<div class="grid-container">
+    <div class="header">
+        <h2>Welcome to this weird shop <3</h2>
+    </div>
+    <div class="navbar">
+        <ul>
+            <li> <a href="/">Shop</a></li>
+            <li><a href="/shoppingCart">Your Cart</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <% for (let i in proList) { %>
+        <div class="item">
+            <form action="/addToCart" method="post">
+            <h3><%= proList[i].name %></h3>
+            <h2>$ <%= proList[i].price %></h2>
+             <p><%= proList[i].description %></p>
+            <input type="hidden" name="selectProduct" value="<%= proList[i].id%>">
+            <input type="submit" value="Add">
+                <h6><%= proList[i].id %></h6>
+            </form>
+        </div>
+        <% } %>
+    </div>
+    <div class="footer">Bye</div>
+</div>
+</body>
+</html>

@@ -13,12 +13,11 @@ app.get('/', (req, res) => {
 
 
     if (hour >= 6 && hour <= 18) {
-        actcss = "night.css";
-    } else {
         actcss = "day.css";
+    } else {
+        actcss = "night.css";
     }
-    console.log(hour);
-    console.log('In the middleware!');
+
     res.send('<!DOCTYPE html>\n' +
         '<html lang="en">\n' +
         '<head>\n' +

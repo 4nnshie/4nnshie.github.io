@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
     res.send('<form action="/result" method="post">Name:<input type="text" name="name" >Age:<input type="number" name="age" ><input type="submit" value="Submit Query"></form>');
 });
 
-app.use('/result', (req, res) => {
+app.post('/result', (req, res) => {
     let name = req.body.name;
     let age = req.body.age;
     res.send(`Welcome ${name}, you are ${age} years old`);
