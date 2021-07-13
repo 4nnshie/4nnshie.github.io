@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Shopping Cart</title>
+</head>
+<body>
+<div class="grid-container">
+    <div class="header">
+        <h2>Welcome to this weird shop <3</h2>
+    </div>
+    <div class="navbar">
+        <ul>
+            <li><a href="/">Shop</a></li>
+            <li><a href="/shoppingCart">Your Cart</a></li>
+        </ul>
+    </div>
+    <div class="content-Cart">
+<%let sum=0%>
+            <% for (let i in shopList) { %>
+                <div class="item">
+                    <form action="/editCart" method="post">
+                        <span><%=shopList[i].product.name %></span>
+                        <span>$ <%=shopList[i].product.price%></span>
+                        <%sum+=shopList[i].product.price * shopList[i].num%>
+                        <span> Quantity : <%=shopList[i].num %></span>
+                        <input type="hidden" name="selectProduct" value="<%= shopList[i].product.id %>">
+                    </form>
+                </div>
+
+            <% } %>
+                <div class="item">
+                    <span>SubTotal= $ <%=sum %></span>
+                </div>
+
+    </div>
+    <div class="footer">Bye</div>
+</div>
+</body>
+</html>
